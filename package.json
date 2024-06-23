@@ -1,0 +1,26 @@
+{
+   "name": "MyProject",
+   "version": "0.0.1",
+   "description": "Awesome project developed with TypeORM.",
+   "type": "commonjs",
+   "devDependencies": {
+      "@types/node": "^16.18.101",
+      "nodemon": "^3.1.4",
+      "ts-node": "^10.9.1",
+      "tsconfig-paths": "^4.2.0",
+      "typescript": "^4.5.2"
+   },
+   "dependencies": {
+      "mysql": "^2.14.1",
+      "mysql2": "^3.10.1",
+      "reflect-metadata": "^0.1.13",
+      "typeorm": "0.3.20"
+   },
+   "scripts": {
+      "start": "ts-node src/index.ts",
+      "typeorm": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js --dataSource ./src/data-source.ts",
+      "migration:generate": "npm run typeorm migration:generate ./src/migration/Migration",
+      "migration:run": "npm run typeorm  migration:run",
+      "migration:revert": "npm run typeorm migration:revert"
+   }
+}
