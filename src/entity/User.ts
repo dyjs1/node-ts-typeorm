@@ -12,7 +12,7 @@ export class User {
     @Column() // 기존 생성
     password: string
 
-    @Column() //추가한 컬럼
+    @Column() //추가한 컬럼 migration test
     address: string 
 
 
